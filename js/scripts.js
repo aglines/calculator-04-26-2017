@@ -16,6 +16,14 @@ var divide = function(input1, input2) {
   return (input1 / input2).toFixed(5);
 };
 
+var square = function(input1) {
+  return (input1 * input1);
+}
+
+var squareroot = function(input1){
+  return (Math.sqrt(input1));
+}
+
 // Everything below this line is the user interface (or front-end) logic:
 
 $(document).ready(function() {
@@ -43,6 +51,14 @@ $(document).ready(function() {
       var result = divide(input1, input2);
       $("#output").text(result);
       }
+    if (mathType === "square") {
+      var result = square(input1);
+      $("#output").text(result);
+    }
+    if (mathType === "sqrt") {
+      var result = squareroot(input1);
+      $("#output").text(result);
+    }
 
 
 
