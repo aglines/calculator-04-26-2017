@@ -1,7 +1,7 @@
 // This is the business (or back-end) logic:
 
 var add = function(input1, input2) {
-  return input1 + input2;
+  return (input1 + input2);
 };
 
 var subtract = function(input1, input2) {
@@ -17,7 +17,7 @@ var divide = function(input1, input2) {
 };
 
 var square = function(input1) {
-  return (input1 * input1);
+  return (input1 * input1).toFixed(5);
 }
 
 var squareroot = function(input1){
@@ -29,8 +29,8 @@ var squareroot = function(input1){
 $(document).ready(function() {
   $("form#compute").submit(function(event){
     event.preventDefault();
-    var input1 = parseInt($("#input1").val());
-    var input2 = parseInt($("#input2").val());
+    var input1 = parseFloat($("#input1").val());
+    var input2 = parseFloat($("#input2").val());
 
     var mathType = $("#mathType").val();
     console.log(mathType);
@@ -59,11 +59,6 @@ $(document).ready(function() {
       var result = squareroot(input1);
       $("#output").text(result);
     }
-
-
-
   });
-
-
 
 });
